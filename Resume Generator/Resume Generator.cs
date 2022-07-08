@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 using System.IO;
+using Newtonsoft.Json;
+using SautinSoft.Document;
+
 namespace Resume_Generator
 {
     public partial class mainPage : Form
@@ -49,8 +51,8 @@ namespace Resume_Generator
         }
 
         // JSON MAKER
-
-        public void personList()
+        Data info;
+        public void saveFunc()
         {
             Data jobSeeker = new Data()
             {
@@ -85,12 +87,214 @@ namespace Resume_Generator
 
             jobSeekerData = String.Empty;
             jobSeekerData = File.ReadAllText(@"C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\data.json");
-            var info = JsonConvert.DeserializeObject<Data>(jobSeekerData);
+            info = JsonConvert.DeserializeObject<Data>(jobSeekerData);
         }
 
+        private void writerFunc()
+        {
+            // PATH
+
+            string docPath = @"C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\resume.pdf";
+
+            //DOCUMENT TOOLS
+
+            DocumentCore dc = new DocumentCore();
+            DocumentBuilder db = new DocumentBuilder(dc);
+
+            // SIZE
+
+            Section section = db.Document.Sections[0];
+            section.PageSetup.PaperType = PaperType.A4;
+
+            // NAME
+
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 25;
+            db.CharacterFormat.Bold = true;
+            db.Write(info.Name.ToString());
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            // CONTACT
+
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 12;
+            db.CharacterFormat.Bold = false;
+            db.Write(info.Email.ToString() + " | " + info.Contact.ToString());
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            // OBJECTIVES
+
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 18;
+            db.CharacterFormat.UnderlineStyle = UnderlineType.Single;
+            db.CharacterFormat.Bold = true;
+            db.Write("Objectives");
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            db.CharacterFormat.ClearFormatting();
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 10;
+            db.CharacterFormat.Bold = false;
+            db.Write(info.Objectives.ToString());
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            // WORK EXPERIENCE
+
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 18;
+            db.CharacterFormat.UnderlineStyle = UnderlineType.Single;
+            db.CharacterFormat.Bold = true;
+            db.Write("Work Experience");
+
+            // WORK EXPERIENCE 1
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            db.CharacterFormat.ClearFormatting();
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 10;
+            db.CharacterFormat.Bold = true;
+            db.Write(info.Company1.ToString());
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            db.CharacterFormat.ClearFormatting();
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 10;
+            db.CharacterFormat.Bold = true;
+            db.Write(info.Position1.ToString() + " | " + info.StartDate1.ToString() + " - " + info.EndDate1.ToString());
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            db.CharacterFormat.ClearFormatting();
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 10;
+            db.CharacterFormat.Bold = false;
+            db.Write(info.WorkAccomplishment1.ToString());
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            // WORK EXPERIENCE 2
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            db.CharacterFormat.ClearFormatting();
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 10;
+            db.CharacterFormat.Bold = true;
+            db.Write(info.Company2.ToString());
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            db.CharacterFormat.ClearFormatting();
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 10;
+            db.CharacterFormat.Bold = true;
+            db.Write(info.Position2.ToString() + " | " + info.StartDate2.ToString() + " - " + info.EndDate2.ToString());
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            db.CharacterFormat.ClearFormatting();
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 10;
+            db.CharacterFormat.Bold = false;
+            db.Write(info.WorkAccomplishment2.ToString());
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            // WORK EXPERIENCE 3
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            db.CharacterFormat.ClearFormatting();
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 10;
+            db.CharacterFormat.Bold = true;
+            db.Write(info.Company3.ToString());
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            db.CharacterFormat.ClearFormatting();
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 10;
+            db.CharacterFormat.Bold = true;
+            db.Write(info.Position3.ToString() + " | " + info.StartDate3.ToString() + " - " + info.EndDate3.ToString());
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            db.CharacterFormat.ClearFormatting();
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 10;
+            db.CharacterFormat.Bold = false;
+            db.Write(info.WorkAccomplishment3.ToString());
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            // SKILLS
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 18;
+            db.CharacterFormat.UnderlineStyle = UnderlineType.Single;
+            db.CharacterFormat.Bold = true;
+            db.Write("Skills");
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            db.CharacterFormat.ClearFormatting();
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 10;
+            db.CharacterFormat.Bold = true;
+            db.Write("Hard Skills");
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+            db.CharacterFormat.Bold = false;
+            db.Write(info.HardSkills.ToString());
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+            db.CharacterFormat.ClearFormatting();
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 10;
+            db.CharacterFormat.Bold = true;
+            db.Write("Soft Skills");
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+            db.CharacterFormat.Bold = false;
+            db.Write(info.SoftSkills.ToString());
+
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+
+
+            // EDUCATION
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 18;
+            db.CharacterFormat.UnderlineStyle = UnderlineType.Single;
+            db.CharacterFormat.Bold = true;
+            db.Write("Education");
+            db.InsertSpecialCharacter(SpecialCharacterType.LineBreak);
+            db.CharacterFormat.ClearFormatting();
+            db.CharacterFormat.FontName = "Times New Roman";
+            db.CharacterFormat.Size = 10;
+            db.CharacterFormat.Bold = true;
+            db.Write(info.School.ToString() + " | " + "Graduated " + info.YearGraduated.ToString());
+            db.CharacterFormat.Bold = false;
+            db.Write(info.WorkAccomplishment3.ToString());
+
+            // SAVE
+            dc.Save(docPath, new PdfSaveOptions());
+        }
+
+        // BUTTON
         private void generateBTN_Click(object sender, EventArgs e)
         {
-            personList();
+            saveFunc();
+            writerFunc();
         }
     }
 }
