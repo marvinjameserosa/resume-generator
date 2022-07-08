@@ -9,3 +9,14 @@ C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\R
 C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Resume Generator\Resume Genarator\resume generator\Resume Generator\Resume Generator\obj\Debug\Resume Generator.csproj.CoreCompileInputs.cache
 C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Resume Generator\Resume Genarator\resume generator\Resume Generator\Resume Generator\obj\Debug\Resume Generator.exe
 C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Assignment\Resume Generator\Resume Genarator\resume generator\Resume Generator\Resume Generator\obj\Debug\Resume Generator.pdb
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\bin\Debug\Resume Generator.exe.config
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\bin\Debug\Resume Generator.exe
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\bin\Debug\Resume Generator.pdb
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\obj\Debug\Resume Generator.csproj.AssemblyReference.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\obj\Debug\Resume Generator.csproj.SuggestedBindingRedirects.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\obj\Debug\Resume_Generator.mainPage.resources
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\obj\Debug\Resume_Generator.Properties.Resources.resources
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\obj\Debug\Resume Generator.csproj.GenerateResource.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\obj\Debug\Resume Generator.csproj.CoreCompileInputs.cache
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\obj\Debug\Resume Generator.exe
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\obj\Debug\Resume Generator.pdb
