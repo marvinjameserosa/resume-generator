@@ -20,3 +20,6 @@ C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Gener
 C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\obj\Debug\Resume Generator.csproj.CoreCompileInputs.cache
 C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\obj\Debug\Resume Generator.exe
 C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\obj\Debug\Resume Generator.pdb
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mjae0\OneDrive\Documents\University\Freshmen\secondSem\OOP\Resume Generator\Resume Generator\Resume Generator\obj\Debug\Resume Generator.csproj.CopyComplete
